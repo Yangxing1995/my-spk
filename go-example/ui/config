@@ -1,6 +1,6 @@
 {
     ".url": {
-        "SYNO.SDS.ExamplePackage": {
+        "SYNO.SDS.MYTEST": {
             "allUsers": true,
             "desc": "This is go test package",
             "icon": "images/{0}.png",

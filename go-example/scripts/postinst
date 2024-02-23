@@ -5,9 +5,9 @@
 ### Actions after package installed.
 ### ex. create database, create symbolic link...
 
-echo "postinst"
+SYNOPKG_PKGDEST_OPENHAB_ENV="${SYNOPKG_PKGDEST}/app/app.env"
 
-echo "HTTP_PORT=\"${OPENHAB_HTTP_PORT}\"" >> app.env
-echo "REDIS_PASSWORD=\"${REDIS_PASSWORD}\"" >> app.env
+echo "HTTP_PORT=\"${OPENHAB_HTTP_PORT}\"" >> ${SYNOPKG_PKGDEST_OPENHAB_ENV}
+echo "REDIS_PASSWORD=\"${OPENHAB_REDIS_PASSWORD}\"" >> ${SYNOPKG_PKGDEST_OPENHAB_ENV}
 
 exit 0
