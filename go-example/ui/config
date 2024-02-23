@@ -2,11 +2,11 @@
     ".url": {
         "SYNO.SDS.ExamplePackage": {
             "allUsers": true,
-            "desc": "Example Package",
+            "desc": "This is go test package",
             "icon": "images/{0}.png",
-            "port": "8888",
-            "protocol": "https",
-            "title": "Example Package",
+            "port": "6599",
+            "protocol": "http",
+            "title": "go-test",
             "type": "url",
             "url": "/"
         }

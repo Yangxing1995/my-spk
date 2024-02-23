@@ -19,9 +19,9 @@ create_package_tgz() {
 
 	### install needed file into PKG_DIR
 	mkdir -p $binary_dir
-	cp -av examplePkg $binary_dir
+	cp -av resources/mytest $binary_dir
 	cp -av ui $package_tgz_dir
-	make install DESTDIR="$package_tgz_dir"
+#	make install DESTDIR="$package_tgz_dir"
 
 	### create package.tgz $1: source_dir $2: dest_dir
 	pkg_make_package $package_tgz_dir "${PKG_DIR}"
@@ -30,11 +30,12 @@ create_package_tgz() {
 create_spk(){
 
 	cp -av scripts $PKG_DIR/scripts
-	cp -av PACKAGE_ICON*.PNG $PKG_DIR
 	cp -av WIZARD_UIFILES $PKG_DIR
 	cp -av conf $PKG_DIR
 	cp -av ui $PKG_DIR
 	cp -av LICENSE $PKG_DIR
+	[ -d $PKG_DIR/app ] || mkdir -p $PKG_DIR/app
+	cp -av resources/app.env $PKG_DIR/app
 
 	./INFO.sh > INFO
 	cp INFO $PKG_DIR/INFO

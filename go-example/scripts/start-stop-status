@@ -4,19 +4,20 @@
 case $1 in
 	start)
 		### Start this package.
-		examplePkg "Start"
+		nohup ./mytest >mytest.log 2>&1
 		echo "the package has been started" > $SYNOPKG_TEMP_LOGFILE
 		exit 0
 	;;
 	stop)
 		### Stop this package.
-		examplePkg "Stop"
+    # examplePkg "Stop"
+    # todo 待完善
 		echo "the package has been stopped" > $SYNOPKG_TEMP_LOGFILE
 		exit 0
 	;;
 	status)
 		### Check package alive.
-		if [ -h "/usr/local/bin/examplePkg" ]; then
+		if [ -h "/usr/local/bin/mytest" ]; then
 			exit 0
 		else
 			exit 1

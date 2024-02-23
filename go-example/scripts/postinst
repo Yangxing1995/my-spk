@@ -5,12 +5,9 @@
 ### Actions after package installed.
 ### ex. create database, create symbolic link...
 
-if [ "$myradio1" = true ] ; then
-    echo 'radio button 1 is selected' # the output log can be viewed at /var/log/packages/[packagename].log
-fi
+echo "postinst"
 
-if [ "$myradio2" = true ] ; then
-    echo 'radio button 2 is selected'
-fi
+echo "HTTP_PORT=\"${OPENHAB_HTTP_PORT}\"" >> app.env
+echo "REDIS_PASSWORD=\"${REDIS_PASSWORD}\"" >> app.env
 
 exit 0

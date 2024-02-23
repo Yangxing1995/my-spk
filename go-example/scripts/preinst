@@ -5,4 +5,6 @@
 ### Actions before package installed.
 ### ex. check environment.
 
+echo "preinst"
+
 exit 0
