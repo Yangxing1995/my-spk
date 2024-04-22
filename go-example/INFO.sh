@@ -3,6 +3,7 @@
 
 source /pkgscripts/include/pkg_util.sh
 
+install_dep_package="redis>=7.2.1"
 package="mytest"
 version="1.0.0-0001"
 displayname="my test"
