@@ -7,8 +7,8 @@ pkgscripts-ng/PkgCreate.py [-p {platforms}] -c -v 7.0 ExamplePkg
 ```
 
 ```bash
-pkgscripts-ng/PkgCreate.py -p avoton -c -v 7.0 ExamplePkg
-pkgscripts-ng/PkgCreate.py -c -v 7.0 ExamplePkg # will generate package for all platforms in build_env
+sudo ./EnvDeploy -v 7.0 -p avoton -D
+sudo ./PkgCreate.py -v 7.0 -p avoton -c go-example
 ```
 
 You can find generated packages in result_spk directory.
