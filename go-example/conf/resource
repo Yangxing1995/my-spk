@@ -1,0 +1,8 @@
+{
+  "usr-local-linker": {
+    "bin": ["usr/local/bin/mytest"]
+  },
+  "port-config": {
+    "protocol-file": "port_conf/xxdns.sc"
+  }
+}
