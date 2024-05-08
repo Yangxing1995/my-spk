@@ -5,6 +5,37 @@
 ### Actions after package installed.
 ### ex. create database, create symbolic link...
 
+. "$(dirname "$0")"/common
+
+
+# 检查数据库信息
+#[ -f /var/packages/postgresql/enabled ] && RunDB="yes" || RunDB="no"
+#
+#ADMIN_ACCOUNT="$wizard_m10_acc"
+#ADMIN_PASS="$wizard_m10_pass"
+#
+#CustomPreuninst
+#
+#if [ "$SYNOPKG_PKG_STATUS" = "UNINSTALL" ]; then
+#	if $REQUIRE_DB_SETUP; then
+#		if [ "$RunDB" = "yes" ]; then
+#			DBAdminCheck "$ADMIN_ACCOUNT" "$ADMIN_PASS" "$PSQL" "$m10_admin_permission_error" || exit 1
+#		else
+#			echo "$sql_not_run" >> "$SYNOPKG_TEMP_LOGFILE"
+#		fi
+#	fi
+#	rm -rf "$(GetBackupPath)" "$INFO_FILE"
+#else
+#	rm -rf "$(GetBackupPath)"
+#	CustomRemove
+#	CustomBackupData
+#	echo "path=$(GetBackupPath)" >> "$INFO_FILE"
+#	echo "version=$SYNOPKG_PKGVER" >> "$INFO_FILE"
+#fi
+#
+#exit 0
+
+
 SYNOPKG_PKGDEST_OPENHAB_ENV="${SYNOPKG_PKGDEST}/app/app.env"
 
 echo "HTTP_PORT=\"${OPENHAB_HTTP_PORT}\"" >> ${SYNOPKG_PKGDEST_OPENHAB_ENV}

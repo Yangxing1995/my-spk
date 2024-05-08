@@ -1,0 +1,8 @@
+#!/bin/bash
+
+LANG_FILE="$(dirnama "$0")/lang/$SYNOPKG_DSM_LANGUAGE"
+if [ -f "$LANG_FILE" ]; then
+  . "$LANG_FILE"
+else
+  . "$(dirnama "$0")/lang/default"
+fi

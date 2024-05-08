@@ -1,5 +1,28 @@
 {
   "usr-local-linker": {
-    "bin": ["usr/local/bin/mytest"]
+    "bin": [
+      "usr/local/bin/mytest"
+    ]
+  },
+  "mariadb10-db": {
+    "admin-account-m10": "{{wizard_m10_acc}}",
+    "admin-pw-m10": "{{wizard_m10_pass}}",
+    "create-db": {
+      "flag": "{{create_db_flag}}",
+      "db-name": "{{pkgwizard_db_name}}",
+      "db-collision": "{{create_db_collision}}"
+    },
+    "grant-user": {
+      "flag": "{{grant_user_flag}}",
+      "db-name": "{{pkgwizard_db_name}}",
+      "user-name": "{{pkgwizard_db_user_account}}",
+      "user-pw": "{{pkgwizard_db_user_password}}"
+    },
+    "drop-db-inst": {
+      "flag": "{{drop_db_flag}}",
+      "ver": "{{mariadb_ver}}",
+      "db-name": "{{old_db_name}}"
+    },
+    "drop-db-uninst": "{{pkgwizard_remove_additional}}"
   }
 }

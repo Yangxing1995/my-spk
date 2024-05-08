@@ -1,0 +1,205 @@
+[
+  {
+    "step_title": "设置",
+    "items": [
+      {
+        "type": "textfield",
+        "desc": "设置数据库:",
+        "subitems": [
+          {
+            "key": "wizard_m10_acc",
+            "desc": "管理员数据库账号",
+            "defaultValue": "root",
+            "emptyText": "",
+            "validator": {
+              "allowBlank": false
+            }
+          },
+          {
+            "key": "wizard_m10_pass",
+            "desc": "管理员数据库密码",
+            "defaultValue": "",
+            "ident": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "step_title": "设置 CertManager 数据库",
+    "items": [
+      {
+        "type": "textfield",
+        "desc": "设置CertManger使用的库",
+        "subitems": [
+          {
+            "key": "pkgwizard_db_name",
+            "desc": "CertManager库的名字",
+            "validator": {
+              "allowBlank": false
+            }
+          }
+        ]
+      },
+      {
+        "type": "textfield",
+        "subitems": [
+          {
+            "indent": 1,
+            "key": "pkgwizard_db_user_account",
+            "desc": "CertManager库的用户名",
+            "validator": {
+              "allowBlank": false
+            }
+          }
+        ]
+      },
+      {
+        "type": "password",
+        "subitems": [
+          {
+            "indent": 1,
+            "key": "pkgwizard_db_user_password",
+            "desc": "CertManager库的密码"
+          }
+        ]
+      },
+      {
+        "type": "textfield",
+        "subitems": [
+          {
+            "key": "create_db_collision",
+            "desc": "drop or skip",
+            "defaultValue": "replace",
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "type": "multiselect",
+        "subitems": [
+          {
+            "key": "create_db_flag",
+            "desc": "create db or not",
+            "defaultValue": true,
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "type": "textfield",
+        "subitems": [
+          {
+            "key": "old_db_name",
+            "desc": "old db name",
+            "defaultValue": "@OLD_DB@",
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "type": "multiselect",
+        "subitems": [
+          {
+            "key": "drop_db_flag",
+            "desc": "drop old db or not",
+            "defaultValue": false,
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "type": "multiselect",
+        "subitems": [
+          {
+            "key": "grant_user_flag",
+            "desc": "must grant user if exist wizard",
+            "defaultValue": true,
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "type": "textfield",
+        "subitems": [
+          {
+            "key": "mariadb_ver",
+            "desc": "mariadb version",
+            "defaultValue": "$MARIADB_VER",
+            "hidden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "step_title": "基础设置",
+    "items": [
+      {
+        "type": "textfield",
+        "desc": "web信息:",
+        "subitems": [
+          {
+            "key": "SERVER_HTTP_ADDRESS",
+            "desc": "监听地址",
+            "defaultValue": "0.0.0.0",
+            "emptyText": "0.0.0.0"
+          },
+          {
+            "key": "SERVER_HTTP_PORT",
+            "desc": "HTTP 端口",
+            "defaultValue": "8080",
+            "emptyText": "8080",
+            "validator": {
+              "allowBlank": false,
+              "minLength": 4,
+              "maxLength": 5,
+              "regex": {
+                "expr": "/[0-9]{4,5}/i",
+                "errorText": "错误: 端口为4-5位数."
+              }
+            }
+          },
+          {
+            "key": "SERVER_HTTPS_PORT",
+            "desc": "HTTPS 端口",
+            "defaultValue": "8443",
+            "emptyText": "8443",
+            "validator": {
+              "allowBlank": false,
+              "minLength": 4,
+              "maxLength": 5,
+              "regex": {
+                "expr": "/[0-9]{4,5}/i",
+                "errorText": "错误: 端口为4-5位数."
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "step_title": "设置redis连接",
+    "items": [
+      {
+        "type": "textfield",
+        "desc": "设置redis:",
+        "subitems": [
+          {
+            "key": "REDIS_ADDR",
+            "desc": "REDIS 地址",
+            "defaultValue": "127.0.0.1:6379",
+            "emptyText": "127.0.0.1:6379"
+          },
+          {
+            "key": "REDIS_PASSWORD",
+            "desc": "REDIS 密码",
+            "defaultValue": "",
+            "emptyText": ""
+          }
+        ]
+      }
+    ]
+  }
+]
