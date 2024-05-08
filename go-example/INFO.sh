@@ -3,7 +3,7 @@
 
 source /pkgscripts/include/pkg_util.sh
 
-install_dep_package="redis>=7.2.1:PostgreSQL>=13.2-3"
+install_dep_packages="redis>=7.2.1:PostgreSQL>=13.2-3"
 package="mytest"
 version="1.0.0-0001"
 displayname="my test"
