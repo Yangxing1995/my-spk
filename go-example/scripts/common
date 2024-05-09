@@ -1,0 +1,27 @@
+#!/bin/bash
+
+. "$(dirname "$0")/string_loader"
+
+PSQL="/bin/psql"
+
+DBAdminCheck()
+{
+	local user="$1"
+	local password="$2"
+	local mysql="$3"
+	local error_msg="$4"
+
+	# Check admin's account and password
+	if ! $mysql -u "$user" --password="$password" -e "exit"; then
+		echo "$wizard_admin_info_error" >> "$SYNOPKG_TEMP_LOGFILE"
+		return 1
+	fi
+
+	# Check whether the account have all privileges *.* or not
+	$mysql -u "$user" --password="$password" -e "SHOW GRANTS FOR ${user}@localhost" | grep -q "GRANT ALL PRIVILEGES ON \*\.\* TO \('${user}'@'localhost'\|\`${user}\`@\`localhost\`\).* WITH GRANT OPTION.*"
+	if [ $? -eq 1 ]; then
+		echo "$error_msg" >> "$SYNOPKG_TEMP_LOGFILE"
+		return 1
+	fi
+	return 0
+}

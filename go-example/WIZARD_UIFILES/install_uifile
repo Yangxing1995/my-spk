@@ -35,6 +35,8 @@
           {
             "key": "pkgwizard_db_name",
             "desc": "CertManager库的名字",
+            "defaultValue": "certmanager",
+            "emptyText": "certmanager",
             "validator": {
               "allowBlank": false
             }
@@ -48,6 +50,8 @@
             "indent": 1,
             "key": "pkgwizard_db_user_account",
             "desc": "CertManager库的用户名",
+            "defaultValue": "cmer",
+            "emptyText": "cmer",
             "validator": {
               "allowBlank": false
             }
@@ -184,7 +188,7 @@
     "items": [
       {
         "type": "textfield",
-        "desc": "设置redis:",
+        "desc": "redis:",
         "subitems": [
           {
             "key": "REDIS_ADDR",
