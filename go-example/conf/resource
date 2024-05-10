@@ -4,6 +4,9 @@
       "usr/local/bin/mytest"
     ]
   },
+  "synocrond": {
+    "conf": "cron_conf/mytest-cron.conf"
+  },
   "mariadb10-db": {
     "admin-account-m10": "{{wizard_m10_acc}}",
     "admin-pw-m10": "{{wizard_m10_pass}}",
