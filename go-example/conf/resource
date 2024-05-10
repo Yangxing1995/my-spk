@@ -7,8 +7,25 @@
   "webservice": {
     "services": [
       {
-        "service": "mytest—proxy",
+        "service": "mytest",
         "display_name": "mytest",
+        "support_alias": true,
+        "support_server": true,
+        "type": "reverse_proxy",
+        "connect_timeout": 60,
+        "read_timeout": 3600,
+        "send_timeout": 60,
+        "proxy_target": "http://gitlab:30000",
+        "proxy_headers": [
+          {
+            "name": "X-Port",
+            "value": "$server_port"
+          }
+        ]
+      },
+      {
+        "service": "mytest2",
+        "display_name": "mytest2",
         "support_alias": true,
         "support_server": true,
         "type": "reverse_proxy",
@@ -34,6 +51,16 @@
         "app": "SYNO.SDS.mytest",
         "http_port": [8000],
         "https_port": [8443]
+      },
+      {
+        "service": "mytest2",
+        "type": "server",
+        "name": "mytest2",
+        "display_name": "mytest2",
+        "alias": "mytest2",
+        "app": "SYNO.SDS.mytest2",
+        "http_port": [7000],
+        "https_port": [7443]
       }
     ],
     "pkg_dir_prepare": [
