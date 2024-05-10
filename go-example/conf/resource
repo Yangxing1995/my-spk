@@ -4,8 +4,47 @@
       "usr/local/bin/mytest"
     ]
   },
-  "synocrond": {
-    "conf": "cron_conf/mytest-cron.conf"
+  "webservice": {
+    "services": [
+      {
+        "service": "mytest—proxy",
+        "display_name": "mytest",
+        "support_alias": true,
+        "support_server": true,
+        "type": "reverse_proxy",
+        "connect_timeout": 60,
+        "read_timeout": 3600,
+        "send_timeout": 60,
+        "proxy_target": "http://gitlab:30000",
+        "proxy_headers": [
+          {
+            "name": "X-Port",
+            "value": "$server_port"
+          }
+        ]
+      }
+    ],
+    "portals": [
+      {
+        "service": "mytest",
+        "type": "server",
+        "name": "mytest",
+        "display_name": "mytest",
+        "alias": "mytest",
+        "app": "SYNO.SDS.mytest",
+        "http_port": "8000",
+        "https_port": "8443"
+      }
+    ],
+    "pkg_dir_prepare": [
+      {
+        "source": "/var/packages/mytest/target/src",
+        "target": "mytest",
+        "mode": "0755",
+        "group": "http",
+        "user": "mytest"
+      }
+    ]
   },
   "mariadb10-db": {
     "admin-account-m10": "{{wizard_m10_acc}}",
