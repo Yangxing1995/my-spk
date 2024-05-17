@@ -1,0 +1,23 @@
+Unit]
+Description=cmtest Server
+ConditionFileIsExecutable=/tmp/cmtest
+
+
+[Service]
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=/tmp/cmtest
+
+
+
+
+
+
+
+Restart=always
+
+RestartSec=120
+EnvironmentFile=-/etc/sysconfig/cmtest
+
+[Install]
+WantedBy=multi-user.target

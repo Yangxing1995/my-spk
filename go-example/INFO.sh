@@ -4,7 +4,7 @@
 source /pkgscripts/include/pkg_util.sh
 
 install_dep_packages="redis>=7.2.1:postgresql>=12.8"
-package="mytest"
+package="cmtest"
 version="1.0.0-0001"
 displayname="my test"
 os_min_ver="7.0-40000"

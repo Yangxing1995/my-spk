@@ -32,7 +32,7 @@ go-example
 │   └── resource
 ├── resources
 │   ├── app.env
-│   └── mytest
+│   └── cmtest
 ├── scripts
 │   ├── postinst
 │   ├── postuninst

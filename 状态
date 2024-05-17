@@ -1,0 +1,47 @@
+stop_when_error=false&mode=%22parallel%22&compound=%5B%7B%22api%22%3A%22SYNO.Entry.Request%22%2C%22method%22%3A%22request%22%2C%22version%22%3A1%2C%22compound%22%3A%5B%7B%22api%22%3A%22SYNO.Core.ExternalDevice.Storage.USB%22%2C%22version%22%3A1%2C%22method%22%3A%22list%22%2C%22additional%22%3A%5B%22dev_type%22%2C%22product%22%2C%22status%22%2C%22partitions%22%5D%7D%2C%7B%22api%22%3A%22SYNO.Core.ExternalDevice.Storage.eSATA%22%2C%22version%22%3A1%2C%22method%22%3A%22list%22%2C%22additional%22%3A%5B%22dev_type%22%2C%22status%22%5D%7D%5D%7D%5D&api=SYNO.Entry.Request&method=request&version=1
+
+
+stop_when_error: false
+mode: "parallel"
+compound: [{"api":"SYNO.Entry.Request","method":"request","version":1,"compound":[{"api":"SYNO.Core.ExternalDevice.Storage.USB","version":1,"method":"list","additional":["dev_type","product","status","partitions"]},{"api":"SYNO.Core.ExternalDevice.Storage.eSATA","version":1,"method":"list","additional":["dev_type","status"]}]}]
+api: SYNO.Entry.Request
+method: request
+version: 1
+
+{
+    "data": {
+        "has_fail": false,
+        "result": [
+            {
+                "api": "SYNO.Entry.Request",
+                "data": {
+                    "has_fail": false,
+                    "result": [
+                        {
+                            "api": "SYNO.Core.ExternalDevice.Storage.USB",
+                            "data": {
+                                "devices": []
+                            },
+                            "method": "list",
+                            "success": true,
+                            "version": 1
+                        },
+                        {
+                            "api": "SYNO.Core.ExternalDevice.Storage.eSATA",
+                            "data": {
+                                "devices": []
+                            },
+                            "method": "list",
+                            "success": true,
+                            "version": 1
+                        }
+                    ]
+                },
+                "method": "request",
+                "success": true,
+                "version": 1
+            }
+        ]
+    },
+    "success": true
+}

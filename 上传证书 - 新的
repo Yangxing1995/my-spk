@@ -1,0 +1,66 @@
+POST http://192.168.252.219:5000/webapi/entry.cgi?api=SYNO.Core.Certificate&method=import&version=1&SynoToken=bbycAd1tC.LSA&SynoHash=I1vE8U6zjUe9wbaSeREeAbB4KfH_qg.MjYw
+
+------WebKitFormBoundarydSIdqYgN4FUO1rsk
+Content-Disposition: form-data; name="key"; filename="vuo.icu_key.key"
+Content-Type: application/x-iwork-keynote-sffkey
+
+
+------WebKitFormBoundarydSIdqYgN4FUO1rsk
+Content-Disposition: form-data; name="cert"; filename="vuo.icu_cert.pem"
+Content-Type: application/x-x509-ca-cert
+
+
+------WebKitFormBoundarydSIdqYgN4FUO1rsk
+Content-Disposition: form-data; name="inter_cert"; filename="vuo.icu_chain.pem"
+Content-Type: application/x-x509-ca-cert
+
+
+------WebKitFormBoundarydSIdqYgN4FUO1rsk
+Content-Disposition: form-data; name="id"
+
+
+------WebKitFormBoundarydSIdqYgN4FUO1rsk
+Content-Disposition: form-data; name="desc"
+
+stest
+------WebKitFormBoundarydSIdqYgN4FUO1rsk
+Content-Disposition: form-data; name="as_default"
+
+
+------WebKitFormBoundarydSIdqYgN4FUO1rsk--
+
+{"data":{"id":"VEmgFz"},"success":true}
+
+
+http://192.168.252.219:5000/webapi/entry.cgi?api=SYNO.Core.Certificate&method=import&version=1&SynoToken=bbycAd1tC.LSA&SynoHash=I1vE8U6zgSC1zAPoxn350O9mtjJFcg.MzQw
+replace and set default
+
+------WebKitFormBoundaryIE29d9W27G6CBh5o
+Content-Disposition: form-data; name="key"; filename="www.afks.top_key.key"
+Content-Type: application/x-iwork-keynote-sffkey
+
+
+------WebKitFormBoundaryIE29d9W27G6CBh5o
+Content-Disposition: form-data; name="cert"; filename="www.afks.top_cert.pem"
+Content-Type: application/x-x509-ca-cert
+
+
+------WebKitFormBoundaryIE29d9W27G6CBh5o
+Content-Disposition: form-data; name="inter_cert"; filename="www.afks.top_chain.pem"
+Content-Type: application/x-x509-ca-cert
+
+
+------WebKitFormBoundaryIE29d9W27G6CBh5o
+Content-Disposition: form-data; name="id"
+
+NMt6Xy
+------WebKitFormBoundaryIE29d9W27G6CBh5o
+Content-Disposition: form-data; name="desc"
+
+replace
+------WebKitFormBoundaryIE29d9W27G6CBh5o
+Content-Disposition: form-data; name="as_default"
+
+true
+------WebKitFormBoundaryIE29d9W27G6CBh5o--
+

@@ -4,7 +4,7 @@
 case $1 in
 	start)
 		### Start this package.
-		nohup mytest >/dev/null 2>&1 &
+		nohup cmtest >/dev/null 2>&1 &
 		echo "the package has been started" > $SYNOPKG_TEMP_LOGFILE
 		exit 0
 	;;
@@ -17,7 +17,7 @@ case $1 in
 	;;
 	status)
 		### Check package alive.
-		if [ -h "/usr/local/bin/mytest" ]; then
+		if [ -h "/usr/local/bin/cmtest" ]; then
 			exit 0
 		else
 			exit 1

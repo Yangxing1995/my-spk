@@ -1,0 +1,131 @@
+api=SYNO.Core.Certificate.CRT&method=list&version=1
+
+{
+    "data": {
+        "certificates": [
+            {
+                "desc": "",
+                "id": "DrKN5N",
+                "is_broken": false,
+                "is_default": false,
+                "issuer": {
+                    "common_name": "CertCloud RSA EV TLS CA",
+                    "country": "SG",
+                    "organization": "CertCloud Pte. Ltd."
+                },
+                "key_types": "",
+                "renewable": false,
+                "services": [
+                    {
+                        "display_name": "DSM Desktop Service",
+                        "display_name_i18n": "common:web_desktop",
+                        "isPkg": false,
+                        "multiple_cert": true,
+                        "owner": "root",
+                        "service": "default",
+                        "subscriber": "system",
+                        "user_setable": true
+                    },
+                    {
+                        "display_name": "FTPS",
+                        "isPkg": false,
+                        "owner": "root",
+                        "service": "ftpd",
+                        "subscriber": "smbftpd"
+                    },
+                    {
+                        "display_name": "Synology Storage Console Server",
+                        "display_name_i18n": "SYNO.SDS.iSCSI.Application:service:storage_console_server",
+                        "isPkg": true,
+                        "owner": "root",
+                        "service": "pkg-scsi-plugin-server",
+                        "subscriber": "ScsiTarget"
+                    }
+                ],
+                "signature_algorithm": "sha256WithRSAEncryption",
+                "subject": {
+                    "common_name": "vuo.icu",
+                    "country": "CN",
+                    "organization": "上海远律信息技术有限公司",
+                    "state": "上海市",
+                    "sub_alt_name": [
+                        "vuo.icu",
+                        "www.vuo.icu"
+                    ]
+                },
+                "user_deletable": true,
+                "valid_from": "May  6 00:00:00 2024 GMT",
+                "valid_till": "May  6 23:59:59 2025 GMT"
+            },
+            {
+                "desc": "",
+                "id": "NMt6Xy",
+                "is_broken": false,
+                "is_default": false,
+                "issuer": {
+                    "common_name": "TrustAsia RSA DV TLS CA G2",
+                    "country": "CN",
+                    "organization": "TrustAsia Technologies, Inc."
+                },
+                "key_types": "",
+                "renewable": false,
+                "services": [],
+                "signature_algorithm": "sha384WithRSAEncryption",
+                "subject": {
+                    "common_name": "*.www.afks.top",
+                    "sub_alt_name": [
+                        "*.www.afks.top",
+                        "*.cdn.afks.top",
+                        "www.afks.top"
+                    ]
+                },
+                "user_deletable": true,
+                "valid_from": "Mar 11 00:00:00 2024 GMT",
+                "valid_till": "Mar 11 23:59:59 2025 GMT"
+            },
+            {
+                "desc": "",
+                "id": "l4N3BY",
+                "is_broken": false,
+                "is_default": true,
+                "issuer": {
+                    "city": "Taipel",
+                    "common_name": "Synology Inc. CA",
+                    "country": "TW",
+                    "organization": "Synology Inc."
+                },
+                "key_types": "",
+                "renewable": false,
+                "self_signed_cacrt_info": {
+                    "issuer": {
+                        "city": "Taipel",
+                        "common_name": "Synology Inc. CA",
+                        "country": "TW",
+                        "organization": "Synology Inc."
+                    },
+                    "subject": {
+                        "city": "Taipel",
+                        "common_name": "Synology Inc. CA",
+                        "country": "TW",
+                        "organization": "Synology Inc."
+                    }
+                },
+                "services": [],
+                "signature_algorithm": "sha256WithRSAEncryption",
+                "subject": {
+                    "city": "Taipel",
+                    "common_name": "synology",
+                    "country": "TW",
+                    "organization": "Synology Inc.",
+                    "sub_alt_name": [
+                        "synology"
+                    ]
+                },
+                "user_deletable": true,
+                "valid_from": "Feb 20 06:23:57 2024 GMT",
+                "valid_till": "Feb 20 06:23:57 2025 GMT"
+            }
+        ]
+    },
+    "success": true
+}

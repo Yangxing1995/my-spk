@@ -1,0 +1,9 @@
+
+settings=%5B%7B%22service%22%3A%7B%22display_name%22%3A%22FTPS%22%2C%22isPkg%22%3Afalse%2C%22owner%22%3A%22root%22%2C%22service%22%3A%22ftpd%22%2C%22subscriber%22%3A%22smbftpd%22%7D%2C%22old_id%22%3A%22DrKN5N%22%2C%22id%22%3A%22NMt6Xy%22%7D%2C%7B%22service%22%3A%7B%22display_name%22%3A%22Synology%20Storage%20Console%20Server%22%2C%22display_name_i18n%22%3A%22SYNO.SDS.iSCSI.Application%3Aservice%3Astorage_console_server%22%2C%22isPkg%22%3Atrue%2C%22owner%22%3A%22root%22%2C%22service%22%3A%22pkg-scsi-plugin-server%22%2C%22subscriber%22%3A%22ScsiTarget%22%7D%2C%22old_id%22%3A%22DrKN5N%22%2C%22id%22%3A%22NMt6Xy%22%7D%2C%7B%22service%22%3A%7B%22display_name%22%3A%22DSM%20Desktop%20Service%22%2C%22display_name_i18n%22%3A%22common%3Aweb_desktop%22%2C%22isPkg%22%3Afalse%2C%22multiple_cert%22%3Atrue%2C%22owner%22%3A%22root%22%2C%22service%22%3A%22default%22%2C%22subscriber%22%3A%22system%22%2C%22user_setable%22%3Atrue%7D%2C%22old_id%22%3A%22DrKN5N%22%2C%22id%22%3A%22NMt6Xy%22%7D%5D&api=SYNO.Core.Certificate.Service&method=set&version=1
+
+[{"service":{"display_name":"FTPS","isPkg":false,"owner":"root","service":"ftpd","subscriber":"smbftpd"},"old_id":"DrKN5N","id":"NMt6Xy"},
+{"service":{"display_name":"Synology Storage Console Server","display_name_i18n":"SYNO.SDS.iSCSI.Application:service:storage_console_server","isPkg":true,"owner":"root","service":"pkg-scsi-plugin-server","subscriber":"ScsiTarget"},"old_id":"DrKN5N","id":"NMt6Xy"},
+{"service":{"display_name":"DSM Desktop Service","display_name_i18n":"common:web_desktop","isPkg":false,"multiple_cert":true,"owner":"root","service":"default","subscriber":"system","user_setable":true},"old_id":"DrKN5N","id":"NMt6Xy"}]
+
+
+{"data":{"restart_httpd":true},"success":true}
