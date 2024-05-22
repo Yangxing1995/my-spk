@@ -1,26 +1,68 @@
 #!/bin/sh
 # Copyright (C) 2000-2020 Synology Inc. All rights reserved.
 
+scriptDir="$(dirname "$0")"
+
+logFile="${scriptDir}/cmtest.log"
+pidFile="${scriptDir}/cmtest.pid"
+
+start_service(){
+	if [ -f "$pidFile" ]; then
+		echo "the cmtest has been started"
+	else 
+		nohup cmtest >$logFile 2>&1 &
+		echo $! > $pidFile
+	fi
+}
+
+stop_service(){
+	if [ -f "$pidFile" ]; then
+		kill -9 `cat $pidFile`
+		rm -rf $pidFile
+	    echo "the cmtest has been stopped"
+	else
+		echo "the cmtest has not been started"
+	fi	
+}
+
+
+status_service() {
+    if [ -f "$pidFile" ]; then
+        if ps -p "$(cat "$pidFile")" > /dev/null 2>&1; then
+            echo "Service is running."
+			return 0
+        else
+            echo "Service is not running, but PID file exists."
+            rm -f "$pidFile"
+			return 1
+        fi
+    else
+        echo "Service is not running."
+		return 1
+    fi
+}
+
+
+
 case $1 in
 	start)
 		### Start this package.
-		nohup cmtest >/dev/null 2>&1 &
-		echo "the package has been started" > $SYNOPKG_TEMP_LOGFILE
+		start_service
 		exit 0
 	;;
 	stop)
 		### Stop this package.
-    # examplePkg "Stop"
-    # todo 待完善
-		echo "the package has been stopped" > $SYNOPKG_TEMP_LOGFILE
+		stop_service
+		# echo "the cmtest has been stopped" > $SYNOPKG_TEMP_LOGFILE
 		exit 0
 	;;
 	status)
 		### Check package alive.
-		if [ -h "/usr/local/bin/cmtest" ]; then
-			exit 0
-		else
+		status_service
+		if [ $? -eq 1]; then
 			exit 1
+		else
+			exit 0
 		fi
 	;;
 	killall)
